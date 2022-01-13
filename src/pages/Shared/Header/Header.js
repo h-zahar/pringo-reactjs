@@ -20,7 +20,7 @@ const Header = () => {
                         <li><NavLink activeStyle={activeStyle} to="/prings">Prings</NavLink></li>
                         {
                             user?.email &&
-                            <li>{user?.displayName}</li>
+                            <li className="text-success">{user?.displayName}</li>
                         }
                         <li><NavLink activeStyle={activeStyle} to="/profile">Profile</NavLink></li>
                         <li className="nav-item">
