@@ -6,7 +6,7 @@ import SingleFeed from '../SingleFeed/SingleFeed';
 const Feed = () => {
     const [feed, setFeed] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/prings')
+        fetch('https://api-pringo.herokuapp.com/prings')
         .then(res => res.json())
         .then(data => setFeed(data));
     }, [])

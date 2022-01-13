@@ -7,7 +7,7 @@ const MyPrings = () => {
     const { user } = useAuth();
     const [myPrings, setMyPrings] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/prings/${user?.email}`)
+        fetch(`https://api-pringo.herokuapp.com/prings/${user?.email}`)
         .then(res => res.json())
         .then(data => setMyPrings(data))
         .catch(error => {

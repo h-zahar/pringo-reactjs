@@ -12,7 +12,7 @@ const MakeAPring = () => {
         data.email = user.email;
         data.pins = 0;
         data.gossips = 0;
-        fetch('http://localhost:5000/prings', {
+        fetch('https://api-pringo.herokuapp.com/prings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
