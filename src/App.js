@@ -10,7 +10,10 @@ import AuthProvider from './contexts/AuthProvider';
 import initializeAuthentication from './firebase/firebase.init';
 import Login from './pages/Home/Login/Login';
 import Register from './pages/Home/Register/Register';
-import InsidePringo from './pages/InsidePringo/InsidePringo/InsidePringo';
+import Feed from './pages/InsidePringo/Feed/Feed';
+import MakeAPring from './pages/InsidePringo/MakeAPring/MakeAPring';
+import MyPrings from './pages/InsidePringo/MyPrings/MyPrings';
+import Profile from './pages/InsidePringo/Profile/Profile';
 
 
 initializeAuthentication();
@@ -30,7 +33,19 @@ function App() {
             </Route>
 
             <Route path='/feed'>
-              <InsidePringo />
+              <Feed />
+            </Route>
+
+            <Route path='/pringo'>
+              <MakeAPring />
+            </Route>
+
+            <Route path='/prings'>
+              <MyPrings />
+            </Route>
+
+            <Route path='/profile'>
+              <Profile />
             </Route>
           </Switch>
         </Router>

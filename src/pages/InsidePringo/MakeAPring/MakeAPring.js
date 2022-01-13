@@ -1,13 +1,12 @@
 import React from 'react';
 import Header from '../../Shared/Header/Header';
 
-const Feed = () => {
+const MakeAPring = () => {
     return (
         <div>
             <Header />
-            <h1>Test</h1>
         </div>
     )
 }
 
-export default Feed;
+export default MakeAPring;
