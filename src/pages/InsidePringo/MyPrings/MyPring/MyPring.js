@@ -9,7 +9,7 @@ const MyPring = (props) => {
         if(!window.confirm('Are you sure to cancel?')) {
             return;
         }
-        fetch(`https://api-picshore.herokuapp.com/prings/${id}`, {
+        fetch(`https://api-pringo.herokuapp.com/prings/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'aplplication/json'
