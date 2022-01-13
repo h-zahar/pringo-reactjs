@@ -39,7 +39,7 @@ const MakeAPring = () => {
             <div style={{minHeight: '45vh'}} className="my-4 py-3 d-flex justify-content-center">
                 <form style={{maxWidth: '550px', minWidth: '380px'}} className="d-flex flex-column custom-form p-5 shadow-lg rounded" onSubmit={handleSubmit(onSubmit)}>
                     <h4 className="text-center mb-3">Create Pring</h4>
-                    <input className="my-2" placeholder="Title" {...register("title", { required: true})} />
+                    <input className="my-2" placeholder="Title (Optional)" {...register("title", { required: false })} />
                     {errors.title && <span className="mb-2 text-danger">Something's not correct</span>}
 
                     <textarea rows={5} className="my-2" placeholder="Content (Max 700 Characters)" {...register("content", { required: true, maxLength: 700 })} />

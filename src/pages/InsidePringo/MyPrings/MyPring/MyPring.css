@@ -1,0 +1,9 @@
+.btn-cross {
+    transform: rotate(0deg) scale(1);
+    transition: all 2s;
+}
+
+.btn-cross:hover {
+    transform: rotate(360deg) scale(1.15);
+    transition: all 1s;
+}

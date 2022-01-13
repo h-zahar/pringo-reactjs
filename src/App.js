@@ -2,17 +2,18 @@ import './App.css';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Switch
 } from "react-router-dom";
 
+import UserRoute from './pages/UserRoute/UserRoute';
+import NonUserRoute from './pages/NonUserRoute/NonUserRoute';
 import AuthProvider from './contexts/AuthProvider';
 import initializeAuthentication from './firebase/firebase.init';
 import Login from './pages/Home/Login/Login';
 import Register from './pages/Home/Register/Register';
-import Feed from './pages/InsidePringo/Feed/Feed';
+import Feed from './pages/InsidePringo/Feed/Feed/Feed';
 import MakeAPring from './pages/InsidePringo/MakeAPring/MakeAPring';
-import MyPrings from './pages/InsidePringo/MyPrings/MyPrings';
+import MyPrings from './pages/InsidePringo/MyPrings/MyPrings/MyPrings';
 import Profile from './pages/InsidePringo/Profile/Profile';
 
 
@@ -24,29 +25,29 @@ function App() {
       <AuthProvider>
         <Router>
           <Switch>
-            <Route exact path='/'>
+            <NonUserRoute exact path='/'>
               <Login />
-            </Route>
+            </NonUserRoute>
 
-            <Route path='/register'>
+            <NonUserRoute path='/register'>
               <Register />
-            </Route>
+            </NonUserRoute>
 
-            <Route path='/feed'>
+            <UserRoute path='/feed'>
               <Feed />
-            </Route>
+            </UserRoute>
 
-            <Route path='/pringo'>
+            <UserRoute path='/pringo'>
               <MakeAPring />
-            </Route>
+            </UserRoute>
 
-            <Route path='/prings'>
+            <UserRoute path='/prings'>
               <MyPrings />
-            </Route>
+            </UserRoute>
 
-            <Route path='/profile'>
+            <UserRoute path='/profile'>
               <Profile />
-            </Route>
+            </UserRoute>
           </Switch>
         </Router>
       </AuthProvider>
